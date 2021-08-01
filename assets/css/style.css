@@ -1,0 +1,74 @@
+head, body, html {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    scroll-behavior: smooth;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: black;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #b8d8be;
+}
+
+.jumbotron {
+    min-height: 50%;
+    padding-top: 3%;
+    color: black;
+    text-align: center;
+    background-color: #d2e7d6;
+    padding-bottom: 3%;
+}
+
+.me {
+    border-radius: 50%;
+    width: 35%;
+}
+
+.container {
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h2#subheader {
+    padding-bottom: 3%;
+}
+
+.container#projects {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.card {
+    background-color: white;
+    margin: 1%;
+    border-radius: 10px;
+    opacity: 1;
+    width: 100%;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+}
+
+.card-img-top {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.btn-custom {
+    color: black;
+    border-color: #d2e7d6;
+    border-radius: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #d2e7d6;
+}
