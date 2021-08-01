@@ -34,7 +34,10 @@ head, body, html {
 
 @media only screen and (max-width: 600px) {
     .container {
-        width: 80%;
+        width: 90%;
+    }
+
+    h2 {
         text-align: center;
     }
 
@@ -45,6 +48,10 @@ h1 {
 }
 
 h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
     font-size: 1.25rem;
 }
 
@@ -62,6 +69,7 @@ h2#subheader {
     background-color: white;
     margin: 1%;
     border-radius: 10px;
+    border: 2.5px solid #d2e7d6;
     opacity: 1;
     width: 100%;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
