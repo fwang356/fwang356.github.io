@@ -25,11 +25,19 @@ head, body, html {
 .me {
     border-radius: 50%;
     width: 35%;
+    min-width: 150px;
 }
 
 .container {
     width: 50%;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 80%;
+    }
+
+  }
 
 h1 {
     text-align: center;
