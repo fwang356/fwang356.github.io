@@ -5,6 +5,10 @@ head, body, html {
     scroll-behavior: smooth;
 }
 
+.bg-light {
+    background-color: white !important;
+}
+
 .navbar-nav .nav-item .nav-link {
     color: black;
 }
