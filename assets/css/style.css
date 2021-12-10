@@ -15,6 +15,7 @@ head, body, html {
 
 .navbar-nav .nav-item .nav-link:hover {
     color: #b8d8be;
+    color: #ccccff;
 }
 
 .jumbotron {
@@ -23,7 +24,12 @@ head, body, html {
     color: black;
     text-align: center;
     background-color: #d2e7d6;
-    padding-bottom: 3%;
+    background-color: #dedefc;
+    padding-bottom: 1.5%;
+}
+
+.lead {
+    padding-bottom: 1.5%;
 }
 
 .me {
@@ -78,6 +84,7 @@ h2#subheader {
     margin: 1%;
     border-radius: 10px;
     border: 2.5px solid #d2e7d6;
+    border: 2.5px solid #dedefc;
     opacity: 1;
     width: 100%;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
@@ -96,9 +103,11 @@ h2#subheader {
 .btn-custom {
     color: black;
     border-color: #d2e7d6;
+    border-color: #dedefc;
     border-radius: 10px;
 }
 
 .btn-custom:hover {
     background-color: #d2e7d6;
+    background-color: #dedefc;
 }
