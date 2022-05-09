@@ -141,8 +141,8 @@ h5 {
     padding-bottom: 3%;
 }
 
-.row {
-    width: 100%;
+.row-centered {
+    text-align:center;
 }
 
 
@@ -154,7 +154,13 @@ h5 {
     }
 
     .about {
-        top: 50 !important;
+        top: 35%  !important;
+        padding-bottom: 15px;
+    }
+
+    .projects {
+        top: 65%;
+        padding-bottom: 15px;
     }
 
     h1, h2, h3 {
