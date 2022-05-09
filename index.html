@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Wang</title>
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:300&display=swap'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,21 +14,22 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/myIcon.ico">
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.html">
         <img src="assets/favicon-32x32.png" width="30" height="30" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-      
+    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#about-me">About</a>
+                <a class="nav-link" href="about.html">About Me</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="projects.html">Projects</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="assets/Resume.pdf">Resume</a>
@@ -46,136 +47,20 @@
     </div>
 </nav>
 
-<div class="jumbotron jumbotron-fluid">
+<div id="home">
     <div class="container">
-        <h1 id='title' class="display-4">Hi, I'm Felix</h1>
-        <p class="lead">Student at the Georgia Institute of Technology</p>
-        <img src="assets/me2.jpg"class='me'>
-    </div>
-</div>
-
-<div id="about-me">
-    <div class="container" id=#about>
-        <h1>About Me</h1>
-        <br>
-        <h2 id=#about>
-            I'm currently an undergraduate student at Georgia Tech majoring in Computer Science with 
-            concentrations in Intelligence and Modeling & Simulation. 
+        <div class="name">
+            <h1>
+                Hi, I'm Felix
+            </h1>
+            <h2>
+                Computer Science @ Georgia Tech
+            </h2>
             <br>
-            <br>
-            Academically, I'm fascinated by the interdisciplinary applications of computing.
-            Some of my areas of interest include back end development, computer vision, and natural language processing,
-            and I'm always eager to learn more!
-            <br>
-            <br>
-            Outside of school, I enjoy playing tennis, binge-watching entire seasons of K-dramas, and grabbing a bite to eat with my friends.
-            I love discovering new music to listen to and learning new pieces on the guitar.
-            <br>
-            <br>
-            I'm seeking internships for the summer of 2022; email me at fwang356(at)gatech(dot)edu, or click on the link at the top of the page!
-        </h2>
-    </div>
-</div>
-
-<div id="projects"> 
-    <div class="container h-100 pt-5" id="projects">
-        <h1>Projects</h1>
-        <br>
-        <div class="row mt-2">
-            <div class="col-10 offset-1">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="assets/moodi.PNG" class="card-img-top">
-                        <div class="card-body">
-                            <h1 style="text-align: left;">moodi</h1>
-                            <br>
-                            <h3>
-                                Displays your top tracks on Spotify and provides an audio analysis and
-                                recommendations for specific songs.
-                            </h3>
-                            <br>
-                            <a href="https://spotify-moodi.herokuapp.com">
-                                <button class='btn btn-custom'>
-                                    See Project
-                                </button>
-                            </a>
-                            <a href="https://github.com/fwang356/moodi">
-                                <button class='btn btn-custom'>
-                                    GitHub
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/carbon.PNG" class="card-img-top">
-                        <div class="card-body">
-                            <h1 style="text-align: left;">Car-Bon</h1>
-                            <br>
-                            <h3>
-                                Automatically track your car's carbon footprint.
-                            </h3>
-                            <br>
-                            <a href="https://github.com/fwang356/carbon">
-                                <button class='btn btn-custom'>
-                                    GitHub
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="assets/ushoe.PNG" class="card-img-top">
-                        <div class="card-body">
-                            <h1 style="text-align: left;">uShoe</h1>
-                            <br>
-                            <h3>
-                                An AI model trained on images of your favorite shoes. Get notifications for new releases of shoes you may like.
-                            </h3>
-                            <br>
-                            <a href="https://github.com/fwang356/uShoe">
-                                <button class='btn btn-custom'>
-                                    GitHub
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/fuelr.png" class="card-img-top">
-                        <div class="card-body">
-                            <h1 style="text-align: left;">Fuelr</h1>
-                            <br>
-                            <h3>
-                                Plan the optimal gas stops for your trip based on gas station price and rating.
-                            </h3>
-                            <br>
-                            <a href="https://github.com/fwang356/Fuelr">
-                                <button class='btn btn-custom'>
-                                    GitHub
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/facebank.png" class="card-img-top">
-                        <div class="card-body">
-                            <h1 style="text-align: left;">Anti-Troll Discord Bot</h1>
-                            <br>
-                            <h3>
-                                Personal Discord bot made to prevent excess "trolling" in a server.
-                            </h3>
-                            <br>
-                            <a href="https://github.com/fwang356/Anti_Troll_Discord_Bot">
-                                <button class='btn btn-custom'>
-                                    GitHub
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
+
+
 </body>
 </html>
