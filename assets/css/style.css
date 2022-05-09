@@ -150,17 +150,16 @@ h5 {
 @media only screen and (max-width: 768px) {
     .container {
         width: 90%;
+        
+    }
+
+    .about {
+        top: 50 !important;
     }
 
     h1, h2, h3 {
         text-align: center;
     }
-
-    .card {
-        right: 1px;
-    }
-
-
   }
 
 
