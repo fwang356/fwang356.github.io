@@ -10,6 +10,8 @@ head, body, html {
     height: 100%;
 }
 
+
+
 .bg-light {
     background-color: white !important;
 }
@@ -54,37 +56,14 @@ h5 {
 }
 
 #home {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 59px);
     text-align: center;
-    min-height: 100%;
-    min-height: 100vh;
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
-.jumbotron {
-    min-height: 50%;
-    padding-top: 3%;
-    color: black;
-    text-align: center;
-    background-color: #d2e7d6;
-    background-color: #dedefc;
-    padding-bottom: 1.5%;
-}
-
-.lead {
-    padding-bottom: 1.5%;
-}
-
-.me {
-    border-radius: 50%;
-    width: 35%;
-    min-width: 150px;
-}
 
 /*
 .container {
@@ -101,13 +80,10 @@ h5 {
 
 .container {
     position: relative;
-    bottom: 64px;
-    
 }
 
 .container-projects {
     position: relative;
-    bottom: 64px;
 }
 
 .name {
@@ -119,7 +95,6 @@ h5 {
     position: relative;
     text-align: left;
 }
-
 
 
 .projects {
@@ -159,24 +134,29 @@ h5 {
     width: 100%;
 }
 
+@media only screen and (max-width: 1200px) {
+    .container {
+        top: 64px;
+    }
+  }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 768px) {
     .container {
         width: 90%;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
         text-align: center;
     }
 
     .card {
         right: 1px;
     }
-    
-    #first {
-        right: 0px;
-    }
 
+    .container {
+        top: 256px;
+    }
   }
 
 
