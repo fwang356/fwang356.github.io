@@ -29,30 +29,30 @@ head, body, html {
 
 h1 {
     text-align: center;
-    font-size: 72px;
+    font-size: 6vh;
     font-weight: 300;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 2vh;
     font-weight: 300;
     color: black;
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 4vh;
     font-weight: 400;
     color: black;
 }
 
 h4 {
-    font-size: 32px;
+    font-size: 3vh;
     font-weight: 400;
     color: black;
 }
 
 h5 {
-    font-size: 24px;
+    font-size: 1vw;
     font-weight: 300;
     color: black;
     text-align: left;
@@ -154,18 +154,26 @@ h5 {
     }
 
     .about {
-        top: 25%  !important;
         padding-bottom: 15px;
     }
 
     .projects {
-        top: 45%;
+        top: 20%;
         padding-bottom: 15px;
     }
 
     h1, h2, h3 {
         text-align: center;
     }
+
+    h4 {
+        font-size: 2vh;
+    }
+
+    h5 {
+        font-size: 1.7vh;
+    }
+
   }
 
 
