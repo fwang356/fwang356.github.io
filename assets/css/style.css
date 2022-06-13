@@ -70,9 +70,13 @@ h5 {
 }
 
 .thing {
+    height: calc(100vh - 112px);
     width: 100vw;
 }
 
+.thing-projects {
+    width: 100vw;
+}
 
 /*
 .container {
@@ -152,7 +156,7 @@ h5 {
 }
 
 @media only screen and (min-width: 768px) {
-    .thing {
+    .thing-projects {
         height: calc(100vh - 112px);
     }
 
@@ -165,10 +169,6 @@ h5 {
 @media only screen and (max-width: 768px) {
     .container {
         width: 90%;
-    }
-
-    .container-projects {
-        padding-top: 10%;
     }
 
     .about {
