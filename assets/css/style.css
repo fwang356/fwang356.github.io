@@ -31,30 +31,30 @@ head, body, html {
 
 h1 {
     text-align: center;
-    font-size: 6vh;
+    font-size: min(6vh, 54px);
     font-weight: 300;
 }
 
 h2 {
-    font-size: 2vh;
+    font-size: min(2.5vh, 17.5px);
     font-weight: 300;
     color: black;
 }
 
 h3 {
-    font-size: 4vh;
+    font-size: min(4vh, 40px);
     font-weight: 400;
     color: black;
 }
 
 h4 {
-    font-size: 3vh;
+    font-size: min(3vh, 30px);
     font-weight: 400;
     color: black;
 }
 
 h5 {
-    font-size: 1vw;
+    font-size: min(1vw, 12px);
     font-weight: 300;
     color: black;
     text-align: left;
@@ -78,22 +78,10 @@ h5 {
     width: 100vw;
 }
 
-/*
-.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-    overflow: auto;
-
-}
-*/
-
 .container {
     position: relative;
     height: 100%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
