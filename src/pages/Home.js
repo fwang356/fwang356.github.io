@@ -44,7 +44,7 @@ export default function Home() {
 
     return (
         <Div100vh>
-            <VStack p={4} w="100%">
+            <VStack p={4} h="calc(100vh)" w="100%">
                 <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
                     <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
                 </Flex>
