@@ -26,8 +26,8 @@ export default function Projects() {
                     </Text>
                     <Box alignSelf="center" pb={12}>
                         <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} mb={8}>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="30vh" w="30vh" justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={4} justify="flex-start">
+                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" justify="flex-end" _hover={{ bg: "gray.400" }}>
+                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
                                     <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
                                         View your top tracks and artists on Spotify
                                     </Text>
@@ -40,8 +40,8 @@ export default function Projects() {
                                     </Text>
                                 </Flex>
                             </Flex>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="30vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={20} h="30vh" w="30vh" justify="flex-start">
+                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
+                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
                                     <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
                                         Track and manage your car's carbon footprint
                                     </Text>
@@ -55,7 +55,7 @@ export default function Projects() {
                                 </Flex>
                             </Flex>
                             <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={4} justify="flex-start">
+                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
                                     <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
                                         Pre-plan the best gas stops for your drive
                                     </Text>
@@ -68,7 +68,7 @@ export default function Projects() {
                                     </Text>
                                 </Flex>
                             </Flex>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="30vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
+                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
                                 <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
                                     <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
                                         AI model to notify you of new shoes you may like
