@@ -5,6 +5,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import About from '../components/About';
+import Div100vh from 'react-div-100vh';
 
 export default function Home() {
 
@@ -42,8 +43,8 @@ export default function Home() {
     };
 
     return (
-        <div>
-            <VStack p={4} h="calc(100vh)" w="100%">
+        <Div100vh>
+            <VStack p={4} w="100%">
                 <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
                     <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
                 </Flex>
@@ -95,6 +96,6 @@ export default function Home() {
 
             <Experience />
             <Projects />
-        </div>
+        </Div100vh>
     )
 }

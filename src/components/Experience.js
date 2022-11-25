@@ -64,7 +64,7 @@ export default function () {
             <br></br>
             <Text color={isDark ? "gray.200" : "black"} fontSize={isNotSmallerScreen ? "lg" : "sm"}>
               Intern on the AWS EC2 Core Platform team. Worked with other interns to develop a website serving as a source of truth
-              for EC2 cell metrics, reducing the operaional load for customer inqueries. Built a periodic service to query performance 
+              for EC2 cell metrics, reducing the operational load for customer inqueries. Built a periodic service to query performance 
               metrics from Amazon's internal network to provide data to be shown on the website. 
             </Text>
           </TimelineItem>
