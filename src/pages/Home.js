@@ -90,10 +90,10 @@ export default function Home() {
                     {isVisible && <IconButton icon={<FaArrowUp />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollToTop} />}
                 </Flex>
             </Stack>
-            <div id="about">
-                <About />
-            </div>
-
+            <About />
+            <br></br>
+            <br></br>
+            <br></br>
             <Experience />
             <Projects />
         </Div100vh>

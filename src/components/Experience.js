@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScaleFade, Text, useColorMode, useMediaQuery, useToken, VStack } from "@chakra-ui/react";
+import { Text, useColorMode, useMediaQuery, useToken, VStack } from "@chakra-ui/react";
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
 export default function () {
