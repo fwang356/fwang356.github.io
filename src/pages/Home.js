@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box, Button, Flex, IconButton, Text, VStack, useColorMode, useMediaQuery, Stack, Heading, Spacer } from "@chakra-ui/react";
-import { FaSun, FaMoon, FaGithub, FaLinkedin } from "react-icons/fa";
+import { Box, Button, Flex, IconButton, Text, VStack, useColorMode, useMediaQuery, Stack, Heading, Spacer, Icon, Link } from "@chakra-ui/react";
+import { FaHome, FaSun, FaMoon, FaGithub, FaLinkedin } from "react-icons/fa";
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
+import About from '../components/About';
 
 export default function Home() {
 
@@ -10,10 +11,18 @@ export default function Home() {
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <div>
             <VStack p={4} h="calc(100vh)" w="100%">
                 <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
+                    <IconButton ml={4} icon={<FaHome />} isRound="true" onClick={scrollToTop} />
                     <IconButton ml={4} icon={<FaGithub />} isRound="true" onClick={() =>
                         window.open("https://www.github.com/fwang356")
                     } />
@@ -23,7 +32,7 @@ export default function Home() {
                     <IconButton ml={4} mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode} />
                 </Flex>
 
-                <Flex direction="row"
+                <Flex p={8} direction="row"
                     alignSelf="center" h="full">
                     <Box align="flex-start" alignSelf="center">
                         <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="semiBold">
@@ -44,6 +53,7 @@ export default function Home() {
                     </Box>
                 </Flex>
             </VStack>
+            <About />
             <Experience />
             <Projects />
         </div>

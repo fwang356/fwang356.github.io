@@ -42,7 +42,7 @@ export default function () {
               Software Engineer Intern
             </Text>
             <br></br>
-            <Text color={isDark ? "gray.200" : "black"}>
+            <Text color={isDark ? "gray.200" : "black"} fontSize={isNotSmallerScreen ? "lg" : "sm"}>
               Intern on the Google Cloud Data & Insights team. Spearheaded development for a low latency user attribute serving API for
               customization of content on <a href="https://cloud.google.com/" style={{ color: purple }}>cloud.google.com</a> to increase
               user engagement. Constructed an end-to-end pipeline to backfill a database with historical data, minimizing data staleness. Reduced latency
@@ -62,7 +62,7 @@ export default function () {
               Software Development Engineer Intern
             </Text>
             <br></br>
-            <Text color={isDark ? "gray.200" : "black"}>
+            <Text color={isDark ? "gray.200" : "black"} fontSize={isNotSmallerScreen ? "lg" : "sm"}>
               Intern on the AWS EC2 Core Platform team. Worked with other interns to develop a website serving as a source of truth
               for EC2 cell metrics, reducing the operaional load for customer inqueries. Built a periodic service to query performance 
               metrics from Amazon's internal network to provide data to be shown on the website. 
