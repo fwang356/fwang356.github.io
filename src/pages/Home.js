@@ -61,7 +61,7 @@ export default function Home() {
                             Software Engineer | Computer Science Student @ the Georgia Institute of Technology
                         </Text>
                         <Button mt={4} color="purple.400" onClick={() =>
-                            window.open("/resume.pdf")
+                            window.open("/Resume.pdf")
                         }>Resume</Button>
                         <Button mt={4} ml={4} color="purple.400" onClick={() =>
                             window.open("mailto:fwang356@gatech.edu")
@@ -79,7 +79,7 @@ export default function Home() {
                     </Box>
                 </Flex>
                 <Stack>
-                    <IconButton icon={<FaArrowDown />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollDown} />
+                    <IconButton mb={4} icon={<FaArrowDown />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollDown} />
                 </Stack>
 
 
