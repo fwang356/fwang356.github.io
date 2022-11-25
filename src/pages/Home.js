@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Button, Flex, IconButton, Text, VStack, useColorMode, useMediaQuery, Stack, Heading, Spacer, Icon, Link } from "@chakra-ui/react";
-import { FaHome, FaSun, FaMoon, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaArrowDown, FaHome, FaSun, FaMoon, FaGithub, FaLinkedin, FaInstagram, FaArrowUp } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import About from '../components/About';
@@ -10,26 +11,41 @@ export default function Home() {
     const { colorMode, toggleColorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const toggleVisibility = () => {
+            if (window.pageYOffset > 100) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+
+        return () => window.removeEventListener('scroll', toggleVisibility);
+    }, []);
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth',
+            behavior: "smooth",
         });
+    };
+
+    const scrollDown = () => {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth",
+        })
     };
 
     return (
         <div>
             <VStack p={4} h="calc(100vh)" w="100%">
                 <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
-                    <IconButton ml={4} icon={<FaHome />} isRound="true" onClick={scrollToTop} />
-                    <IconButton ml={4} icon={<FaGithub />} isRound="true" onClick={() =>
-                        window.open("https://www.github.com/fwang356")
-                    } />
-                    <IconButton ml={4} icon={<FaLinkedin />} isRound="true" onClick={() =>
-                        window.open("https://www.linkedin.com/in/fwang356")
-                    } />
-                    <IconButton ml={4} mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode} />
+                    <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
                 </Flex>
 
                 <Flex p={8} direction="row"
@@ -50,10 +66,33 @@ export default function Home() {
                         <Button mt={4} ml={4} color="purple.400" onClick={() =>
                             window.open("mailto:fwang356@gatech.edu")
                         }>Contact Me!</Button>
+                        <br></br>
+                        <IconButton mt={4} icon={<FaGithub />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={() =>
+                            window.open("https://www.github.com/fwang356")
+                        } />
+                        <IconButton ml={4} mt={4} icon={<FaLinkedin />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={() =>
+                            window.open("https://www.linkedin.com/in/fwang356")
+                        } />
+                        <IconButton ml={4} mt={4} icon={<HiOutlineMail />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={() =>
+                            window.open("mailto:fwang356@gatech.edu")
+                        } />
                     </Box>
                 </Flex>
+                <Stack>
+                    <IconButton icon={<FaArrowDown />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollDown} />
+                </Stack>
+
+
             </VStack>
-            <About />
+            <Stack alignItems="flex-end">
+                <Flex h="0vh" p={4} position="fixed" bottom="5vh">
+                    {isVisible && <IconButton icon={<FaArrowUp />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollToTop} />}
+                </Flex>
+            </Stack>
+            <div id="about">
+                <About />
+            </div>
+
             <Experience />
             <Projects />
         </div>
