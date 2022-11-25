@@ -44,13 +44,11 @@ export default function Home() {
 
     return (
         <div>
-
-                <VStack p={4} h="100vh" w="100%">
-
+            <Div100vh>
+                <VStack p={4} h="full" w="100%">
                     <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
                         <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
                     </Flex>
-
                     <Flex p={8} direction="row"
                         alignSelf="center" h="full">
                         <Box align="flex-start" alignSelf="center">
@@ -58,7 +56,7 @@ export default function Home() {
                                 Hi, I'm
                             </Text>
                             <Text fontSize={isNotSmallerScreen ? "7xl" : "5xl"} fontWeight="bold" bgGradient="linear(to-r, purple.200, purple.400, purple.600)" bgClip="text">
-                                Felix
+                                Felix Wang
                             </Text>
                             <Text fontSize={isNotSmallerScreen ? "lg" : "sm"} color={isDark ? "gray.200" : "gray.500"}>
                                 Software Engineer | Computer Science Student @ the Georgia Institute of Technology
@@ -84,9 +82,8 @@ export default function Home() {
                     <Stack>
                         <IconButton mb={4} icon={<FaArrowDown />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollDown} />
                     </Stack>
-
                 </VStack>
-
+            </Div100vh>
             <Stack alignItems="flex-end">
                 <Flex h="0vh" p={4} position="fixed" bottom="5vh">
                     {isVisible && <IconButton icon={<FaArrowUp />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollToTop} />}

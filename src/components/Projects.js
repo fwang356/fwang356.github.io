@@ -25,7 +25,7 @@ export default function Projects() {
                         Projects
                     </Text>
                     <Box alignSelf="center" pb={12}>
-                        <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} >
+                        <Flex direction={isNotSmallerScreen ? "row" : "column"} >
                             <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="30vh" w="30vh" justify="flex-end" _hover={{ bg: "gray.400" }}>
                                 <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
                                     <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
@@ -40,7 +40,7 @@ export default function Projects() {
                                     </Text>
                                 </Flex>
                             </Flex>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="30vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
+                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="full" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
                                 <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
                                     <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
                                         Track and manage your car's carbon footprint
@@ -55,7 +55,7 @@ export default function Projects() {
                                 </Flex>
                             </Flex>
                             <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="30vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
+                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start" position="absolute">
                                     <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
                                         Pre-plan the best gas stops for your drive
                                     </Text>
