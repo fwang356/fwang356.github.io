@@ -44,8 +44,8 @@ export default function Home() {
 
     return (
         <div>
-            <Div100vh>
-                <VStack p={4} h="full" w="100%">
+
+                <VStack p={4} h="100vh" w="100%">
 
                     <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
                         <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
@@ -58,7 +58,7 @@ export default function Home() {
                                 Hi, I'm
                             </Text>
                             <Text fontSize={isNotSmallerScreen ? "7xl" : "5xl"} fontWeight="bold" bgGradient="linear(to-r, purple.200, purple.400, purple.600)" bgClip="text">
-                                Felix Wang
+                                Felix
                             </Text>
                             <Text fontSize={isNotSmallerScreen ? "lg" : "sm"} color={isDark ? "gray.200" : "gray.500"}>
                                 Software Engineer | Computer Science Student @ the Georgia Institute of Technology
@@ -86,7 +86,7 @@ export default function Home() {
                     </Stack>
 
                 </VStack>
-            </Div100vh>
+
             <Stack alignItems="flex-end">
                 <Flex h="0vh" p={4} position="fixed" bottom="5vh">
                     {isVisible && <IconButton icon={<FaArrowUp />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={scrollToTop} />}
