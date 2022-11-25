@@ -43,11 +43,11 @@ export default function Home() {
 
     return (
         <div>
-            <VStack p={4} h="full" w="100%">
+            <VStack p={4} h="100vh" w="100%">
                 <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
                     <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
                 </Flex>
-                <Flex p={8} direction="row"
+                <Flex direction="row"
                     alignSelf="center" h="full">
                     <Box align="flex-start" alignSelf="center">
                         <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="semiBold">
