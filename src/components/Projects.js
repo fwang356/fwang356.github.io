@@ -1,7 +1,7 @@
-import { Box, Flex, IconButton, ScaleFade, Text, useColorMode, useMediaQuery, VStack } from '@chakra-ui/react'
-import React, { useRef } from 'react'
-import { FaGithub } from 'react-icons/fa';
+import { Button, Container, Flex, Heading, ScaleFade, Text, useColorMode, useMediaQuery, VStack } from '@chakra-ui/react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useInViewport } from 'react-in-viewport';
+import Carousel from './Carousel';
 
 export default function Projects() {
 
@@ -17,6 +17,14 @@ export default function Projects() {
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch("./projects.json")
+            .then((res) => res.json())
+            .then((res) => setData(res));
+    }, []);
+
     return (
         <div>
             <ScaleFade initialScale={0.95} in={enterCount > 0}>
@@ -24,66 +32,54 @@ export default function Projects() {
                     <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="bold" bgGradient="linear(to-r, purple.200, purple.400, purple.600)" bgClip="text">
                         Projects
                     </Text>
-                    <Box alignSelf="center" pb={12}>
-                        <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} mb={8}>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
-                                    <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
-                                        View your top tracks and artists on Spotify
-                                    </Text>
+                    <Container
+                        py={8}
+                        px={isNotSmallerScreen ? "20" : "0"}
+                        maxW={{
+                            base: "100%",
+                            sm: "35rem",
+                            md: "43.75rem",
+                            lg: "57.5rem",
+                            xl: "75rem",
+                            xxl: "87.5rem"
+                        }}
+                    >
+                        <Carousel gap={64}>
+                            {data.slice(0, 5).map((post, index) => (
+                                <Flex
+                                    key={index}
+                                    boxShadow="rgba(0, 0, 0, 0.08) 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 2px 4px"
+                                    background={isDark ? "gray.300" : "gray.50"}
+                                    justifyContent="space-between"
+                                    flexDirection="column"
+                                    overflow="hidden"
+                                    color="gray.300"
+                                    rounded={8}
+                                    flex={1}
+                                    p={5}
+                                >
+                                    <VStack mb={6}>
+                                        <Heading
+                                            fontSize={{ base: "xl", md: "2xl" }}
+                                            textAlign="left"
+                                            w="full"
+                                            mb={2}
+                                            color="gray.500"
+                                        >
+                                            {post.title.charAt(0).toUpperCase() + post.title.slice(1)}
+                                        </Heading>
+                                        <Text fontSize={isNotSmallerScreen ? "md" : "sm"} color="gray.500" w="full">{post.body.charAt(0).toUpperCase() + post.body.slice(1)}</Text>
+                                    </VStack>
+
+                                    <Flex justifyContent="space-between">
+                                        <Button color="purple.400" size="sm" onClick={() =>
+                                            window.open(post.link)
+                                        }>GitHub</Button>
+                                    </Flex>
                                 </Flex>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-end">
-                                    <IconButton ml={4} icon={<FaGithub />} w="12" h="12" size="lg" bg="transparent" _hover={{ bg: "transparent" }} onClick={() =>
-                                        window.open("https://www.github.com/fwang356/moodi")} />
-                                    <Text pl={4} pb={4} fontSize="xl" fontWeight="semibold">
-                                        Moodi
-                                    </Text>
-                                </Flex>
-                            </Flex>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
-                                    <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
-                                        Track and manage your car's carbon footprint
-                                    </Text>
-                                </Flex>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-end">
-                                    <IconButton ml={4} icon={<FaGithub />} w="12" h="12" size="lg" bg="transparent" _hover={{ bg: "transparent" }} onClick={() =>
-                                        window.open("https://www.github.com/fwang356/carbon")} />
-                                    <Text pl={4} pb={4} fontSize="xl" fontWeight="semibold">
-                                        Car-Bon
-                                    </Text>
-                                </Flex>
-                            </Flex>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
-                                    <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
-                                        Pre-plan the best gas stops for your drive
-                                    </Text>
-                                </Flex>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-end">
-                                    <IconButton ml={4} icon={<FaGithub />} w="12" h="12" size="lg" bg="transparent" _hover={{ bg: "transparent" }} onClick={() =>
-                                        window.open("https://www.github.com/fwang356/fuelr")} />
-                                    <Text pl={4} pb={4} fontSize="xl" fontWeight="semibold">
-                                        Fuelr
-                                    </Text>
-                                </Flex>
-                            </Flex>
-                            <Flex rounded="xl" direction="column" mt={4} bg={isDark ? "gray.500" : "gray.200"} h="40vh" w="30vh" ml={isNotSmallerScreen ? 4 : 0} justify="flex-end" _hover={{ bg: "gray.400" }}>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-start">
-                                    <Text pl={4} pr={4} fontSize={isNotSmallerScreen ? "lg" : "sm"} fontWeight="semibold" alignItems="flex-start" >
-                                        AI model to notify you of new shoes you may like
-                                    </Text>
-                                </Flex>
-                                <Flex rounded="xl" direction="column" mt={4} h="30vh" w="30vh" justify="flex-end">
-                                    <IconButton ml={4} icon={<FaGithub />} w="12" h="12" size="lg" bg="transparent" _hover={{ bg: "transparent" }} onClick={() =>
-                                        window.open("https://www.github.com/fwang356/ushoe")} />
-                                    <Text pl={4} pb={4} fontSize="xl" fontWeight="semibold">
-                                        uShoe
-                                    </Text>
-                                </Flex>
-                            </Flex>
-                        </Flex>
-                    </Box>
+                            ))}
+                        </Carousel>
+                    </Container>
                 </VStack>
             </ScaleFade>
         </div>
