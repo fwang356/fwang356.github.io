@@ -7,7 +7,6 @@ import { SiAmazonaws, SiDatadog, SiGoogle } from "react-icons/si"
 export default function () {
 
   const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   const purple = useToken("colors", "periwinkle.200")
 

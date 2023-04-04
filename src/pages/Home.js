@@ -8,8 +8,6 @@ import Div100vh from 'react-div-100vh';
 
 export default function Home() {
 
-    const { colorMode, toggleColorMode } = useColorMode();
-    const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
     const [isVisible, setIsVisible] = useState(false);
 
@@ -54,7 +52,7 @@ export default function Home() {
                             <Text fontSize={isNotSmallerScreen ? "7xl" : "5xl"} fontWeight="bold" bgGradient="linear(to-r, periwinkle.100, periwinkle.200, periwinkle.300)" bgClip="text">
                                 Felix Wang
                             </Text>
-                            <Text fontSize={isNotSmallerScreen ? "lg" : "sm"} color={isDark ? "gray.200" : "gray.500"}>
+                            <Text fontSize={isNotSmallerScreen ? "lg" : "sm"} color={"gray.200"}>
                                 Software Engineer | Computer Science Student @ the Georgia Institute of Technology
                             </Text>
                             <Button mt={4} color="periwinkle.200" onClick={() =>
