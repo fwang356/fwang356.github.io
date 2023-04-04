@@ -22,7 +22,7 @@ export default function About() {
         <div>
             <ScaleFade initialScale={0.95} in={enterCount > 0}>
                 <VStack ref={ref}>
-                    <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="bold" bgGradient="linear(to-r, purple.200, purple.400, purple.600)" bgClip="text">
+                    <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="bold" bgGradient="linear(to-r, periwinkle.100, periwinkle.200, periwinkle.300)" bgClip="text">
                         About Me
                     </Text>
                     <Flex direction={isNotSmallerScreen ? "row" : "column"}
@@ -32,7 +32,7 @@ export default function About() {
                             backgroundColor="transparent" boxShadow="lg"
                             boxSize={isNotSmallerScreen ? "25%" : "80%"} src='./me.jpg' />
                         <Box align='flex-start'>
-                            <Text fontSize={isNotSmallerScreen ? "md" : "sm"} color={isDark ? "gray.200" : "gray.500"}>
+                            <Text fontSize={isNotSmallerScreen ? "md" : "sm"} color={isDark ? "white" : "gray.500"}>
                                 My name is Felix and I'm a third-year B.S. Computer Science student at the Georgia Institute of Technology.
                                 I'm passionate about creating consumer facing products that help improve people's quality of living.
                                 My primary interests are in backend development, distributed systems, and high performance computing,

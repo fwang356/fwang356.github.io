@@ -3,7 +3,6 @@ import { Box, Button, Flex, IconButton, Text, VStack, useColorMode, useMediaQuer
 import { FaArrowDown, FaSun, FaMoon, FaGithub, FaLinkedin, FaArrowUp } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import Experience from '../components/Experience';
-import Projects from '../components/Projects';
 import About from '../components/About';
 import Div100vh from 'react-div-100vh';
 
@@ -46,25 +45,22 @@ export default function Home() {
         <div>
             <Div100vh>
                 <VStack p={4} h="full" w="100%">
-                    <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
-                        <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
-                    </Flex>
                     <Flex p={8} direction="row"
                         alignSelf="center" h="full">
                         <Box align="flex-start" alignSelf="center">
                             <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="semiBold">
                                 Hi, I'm
                             </Text>
-                            <Text fontSize={isNotSmallerScreen ? "7xl" : "5xl"} fontWeight="bold" bgGradient="linear(to-r, purple.200, purple.400, purple.600)" bgClip="text">
+                            <Text fontSize={isNotSmallerScreen ? "7xl" : "5xl"} fontWeight="bold" bgGradient="linear(to-r, periwinkle.100, periwinkle.200, periwinkle.300)" bgClip="text">
                                 Felix Wang
                             </Text>
                             <Text fontSize={isNotSmallerScreen ? "lg" : "sm"} color={isDark ? "gray.200" : "gray.500"}>
                                 Software Engineer | Computer Science Student @ the Georgia Institute of Technology
                             </Text>
-                            <Button mt={4} color="purple.400" onClick={() =>
+                            <Button mt={4} color="periwinkle.200" onClick={() =>
                                 window.open("/Resume.pdf")
                             }>Resume</Button>
-                            <Button mt={4} ml={4} color="purple.400" onClick={() =>
+                            <Button mt={4} ml={4} color="periwinkle.200" onClick={() =>
                                 window.open("mailto:fwang356@gatech.edu")
                             }>Contact Me!</Button>
                             <br></br>
@@ -94,7 +90,6 @@ export default function Home() {
             <br></br>
             <br></br>
             <Experience />
-            <Projects />
         </div>
 
     )
