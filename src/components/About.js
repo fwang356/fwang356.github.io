@@ -39,7 +39,7 @@ export default function About() {
                                 although I'm always eager to explore the different facets of computer science.
                                 <br></br>
                                 <br></br>
-                                Outside of work and school, my hobbies include playing tennis, going to the gym, bouldering, and binge
+                                Outside of work and school, my hobbies include playing tennis, spikeball, going to the gym, and binge
                                 watching entire seasons of the latest K-dramas/anime. I love discovering new music to listen to on repeat
                                 and learning new pieces on the guitar.
                                 <br></br>

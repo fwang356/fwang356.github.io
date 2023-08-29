@@ -31,11 +31,17 @@ export default function () {
               icon={<SiDatadog />}
             >
               <h1> Datadog </h1>
-              <h4 className="vertical-timeline-element-subtitle">Incoming Software Engineer Intern</h4>
+              <h4 className="vertical-timeline-element-subtitle">Software Engineer Intern</h4>
+              <p>
+                Intern on the Driveline livesearch team.
+                Implemented a service to classify customer organizations by number of bytes ingested to more efficiently allocate data
+                among a low latency in-memory distributed database, reducing query latency and network traffic.
+                Monitored and alerted on potentially misclassified orgs, accelerating the transition process for misclassified orgs.
+              </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: 'rgb(34, 42, 58)', color: '#fff' }}
+              contentStyle={{ background: 'rgb(34, 42, 58)', color: 'grey.500' }}
               contentArrowStyle={{ borderRight: '7px solid  #fff' }}
               date="Aug. 2022 - Nov. 2022"
               iconStyle={{ background: 'rgb(34, 42, 58)', color: '#fff'}}
@@ -86,26 +92,32 @@ export default function () {
           </Text>
           <br>
           </br>
-          <VerticalTimeline lineColor="rgb(188, 184, 228)">
+          <VerticalTimeline lineColor="rgb(188, 190, 242)">
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: 'rgb(188, 184, 228)', color: '#22A3A' }}
+              contentStyle={{ background: 'rgb(188, 190, 242)', color: '#22A3A' }}
               contentArrowStyle={{ borderRight: '7px solid  #fff' }}
               date="May 2023 - Aug. 2023"
               dateClassName={isDark ? "dark" : "light"}
-              iconStyle={{ background: 'rgb(188, 184, 228)', color: '#fff'}}
+              iconStyle={{ background: 'rgb(188, 190, 242)', color: '#fff'}}
               icon={<SiDatadog />}
             >
               <h1 className={isDark ? "dark" : "light"}> Datadog </h1>
-              <h4 className={isDark ? "dark" : "light"}>Incoming Software Engineer Intern</h4>
+              <h4 className={isDark ? "dark" : "light"}>Software Engineer Intern</h4>
+              <p className={isDark ? "dark" : "light"}>
+                Intern on the Driveline livesearch team.
+                Implemented a service to classify customer organizations by number of bytes ingested to more efficiently allocate data
+                among a low latency in-memory distributed database, reducing query latency and network traffic.
+                Monitored and alerted on potentially misclassified orgs, accelerating the transition process for misclassified orgs.
+              </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: 'rgb(188, 184, 228)', color: '#22A3A' }}
+              contentStyle={{ background: 'rgb(188, 190, 242)', color: '#22A3A' }}
               contentArrowStyle={{ borderRight: '7px solid  #fff' }}
               date="Aug. 2022 - Nov. 2022"
               dateClassName={isDark ? "dark" : "light"}
-              iconStyle={{ background: 'rgb(188, 184, 228)', color: '#fff'}}
+              iconStyle={{ background: 'rgb(188, 190, 242)', color: '#fff'}}
               icon={<SiGoogle />}
             >
               <h1 className={isDark ? "dark" : "light"}> Google </h1>
@@ -120,11 +132,11 @@ export default function () {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: 'rgb(188, 184, 228)', color: '#22A3A' }}
+              contentStyle={{ background: 'rgb(188, 190, 242)', color: '#22A3A' }}
               contentArrowStyle={{ borderRight: '7px solid  #fff' }}
               date="May 2022 - Aug. 2022"
               dateClassName={isDark ? "dark" : "light"}
-              iconStyle={{ background: 'rgb(188, 184, 228)', color: '#fff'}}
+              iconStyle={{ background: 'rgb(188, 190, 242)', color: '#fff'}}
               icon={<SiAmazonaws />}
             >
               <h1 className={isDark ? "dark" : "light"}> Amazon Web Services </h1>
