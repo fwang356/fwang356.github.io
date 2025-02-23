@@ -28,7 +28,7 @@ export default function Experience() {
             <p className="intern-title">Software Engineer Intern &mdash; Driveline</p>
             <p className="intern-dates">May 2023 - August 2024</p>
             <p>
-              I created a service to classify customer orgs by size based on their ingested data. Accurately classifying these orgs
+              I created a service to classify customer orgs by size based on their ingested data. Accurately identifying these orgs
               allows for a more efficient allocation of data across our in-memory distributed database, reducing query latency and network traffic overhead.
             </p>
           </div>
