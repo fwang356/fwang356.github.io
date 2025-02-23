@@ -14,7 +14,7 @@ export default function About() {
         {}
     );
 
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
@@ -22,7 +22,7 @@ export default function About() {
         <div>
             <ScaleFade initialScale={0.95} in={enterCount > 0}>
                 <VStack ref={ref}>
-                    <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="bold" bgGradient="linear(to-r, periwinkle.100, periwinkle.200, periwinkle.300)" bgClip="text">
+                    <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="semiBold">
                         About Me
                     </Text>
                     <Flex direction={isNotSmallerScreen ? "row" : "column"}
@@ -33,18 +33,17 @@ export default function About() {
                             boxSize={isNotSmallerScreen ? "25%" : "80%"} src='./me.jpg' />
                         <Box align='flex-start'>
                             <Text fontSize={isNotSmallerScreen ? "md" : "sm"} color={isDark ? "white" : "gray.500"}>
-                                My name is Felix and I'm a third-year B.S. Computer Science student at the Georgia Institute of Technology.
-                                I'm passionate about creating consumer facing products that help improve people's quality of living.
-                                My primary interests are in backend development, distributed systems, and high performance computing,
+                                My name is Felix and I'm currently working as a software engineer at Datadog.
+                                I'm passionate about creating consumer facing products and I'm primarily interested in backend development and data infrastructure,
                                 although I'm always eager to explore the different facets of computer science.
                                 <br></br>
                                 <br></br>
-                                Outside of work and school, my hobbies include playing tennis, spikeball, going to the gym, and binge
+                                Outside of work, you'll probably find me playing tennis, shopping for clothes, or binge 
                                 watching entire seasons of the latest K-dramas/anime. I love discovering new music to listen to on repeat
                                 and learning new pieces on the guitar.
                                 <br></br>
                                 <br></br>
-                                I'm seeking software engineering opportunities; please feel free to contact me at fwang356(at)gatech(dot)edu or
+                                Feel free to contact me at wang052020(at)gmail(dot)com or
                                 click on the buttons below!
                             </Text>
                             <IconButton mt={4} icon={<FaGithub />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={() =>
@@ -54,7 +53,7 @@ export default function About() {
                                 window.open("https://www.linkedin.com/in/fwang356")
                             } />
                             <IconButton ml={4} mt={4} icon={<HiOutlineMail />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={() =>
-                                window.open("mailto:fwang356@gatech.edu")
+                                window.open("mailto:wang052020@gmail.com")
                             } />
                         </Box>
                     </Flex>

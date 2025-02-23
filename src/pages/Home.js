@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Button, Flex, IconButton, Text, VStack, useColorMode, useMediaQuery, Stack } from "@chakra-ui/react";
-import { FaArrowDown, FaSun, FaMoon, FaGithub, FaLinkedin, FaArrowUp } from "react-icons/fa";
+import { FaArrowDown, FaGithub, FaLinkedin, FaArrowUp } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import Experience from '../components/Experience';
 import About from '../components/About';
@@ -8,7 +8,7 @@ import Div100vh from 'react-div-100vh';
 
 export default function Home() {
 
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
     const [isVisible, setIsVisible] = useState(false);
@@ -45,26 +45,23 @@ export default function Home() {
         <div>
             <Div100vh>
                 <VStack p={4} h="full" w="100%">
-                    <Flex w="100%" h="0vh" position="fixed" justifyContent="end">
-                        <IconButton mr={4} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={toggleColorMode} />
-                    </Flex>
                     <Flex p={8} direction="row"
                         alignSelf="center" h="full">
                         <Box align="flex-start" alignSelf="center">
-                            <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="semiBold">
+                            <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="light">
                                 Hi, I'm
                             </Text>
-                            <Text fontSize={isNotSmallerScreen ? "7xl" : "5xl"} fontWeight="bold" bgGradient="linear(to-r, periwinkle.100, periwinkle.200, periwinkle.300)" bgClip="text">
+                            <Text fontSize={isNotSmallerScreen ? "7xl" : "5xl"} fontWeight="semiBold">
                                 Felix Wang
                             </Text>
                             <Text fontSize={isNotSmallerScreen ? "lg" : "sm"} color={isDark ? "gray.200" : "gray.500"}>
-                                Software Engineer | Computer Science Student @ the Georgia Institute of Technology
+                                Software Engineer at Datadog | New York City
                             </Text>
-                            <Button mt={4} color="periwinkle.200" onClick={() =>
+                            <Button mt={4} onClick={() =>
                                 window.open("/Resume.pdf")
                             }>Resume</Button>
-                            <Button mt={4} ml={4} color="periwinkle.200" onClick={() =>
-                                window.open("mailto:fwang356@gatech.edu")
+                            <Button mt={4} ml={4} onClick={() =>
+                                window.open("mailto:wang052020@gmail.com")
                             }>Contact Me!</Button>
                             <br></br>
                             <IconButton mt={4} icon={<FaGithub />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={() =>
@@ -74,7 +71,7 @@ export default function Home() {
                                 window.open("https://www.linkedin.com/in/fwang356")
                             } />
                             <IconButton ml={4} mt={4} icon={<HiOutlineMail />} isRound="true" size={isNotSmallerScreen ? "md" : "sm"} onClick={() =>
-                                window.open("mailto:fwang356@gatech.edu")
+                                window.open("mailto:wang052020@gmail.com")
                             } />
                         </Box>
                     </Flex>
