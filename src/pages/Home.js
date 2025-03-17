@@ -58,7 +58,7 @@ export default function Home() {
                                 Software Engineer at Datadog | New York City
                             </Text>
                             <Button mt={4} onClick={() =>
-                                window.open("/Resume.pdf")
+                                window.open(`${process.env.PUBLIC_URL}/Resume.pdf`)
                             }>Resume</Button>
                             <Button mt={4} ml={4} onClick={() =>
                                 window.open("mailto:wang052020@gmail.com")
